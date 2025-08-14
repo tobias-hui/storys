@@ -1,20 +1,74 @@
 ---
-import Stats from '../components/Stats.astro';
 import Features from '../components/Features.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Layout from '../layouts/Layout.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CallToAction from '../components/CallToAction.astro';
-import Blog from '../components/Blog.astro';
+import Container from '../components/Container.astro';
 ---
 
-<Layout title="Welcome to Astrolus.">
+<Layout title="Storys.ai - AI-Powered Visual Storytelling Platform">
 	<main class="space-y-40 mb-40">
 		<HeroSection/>
+		
+		<!-- Stories Section -->
+		<section class="py-20">
+			<Container>
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Stories created with Storys.ai</h2>
+					<p class="text-xl text-gray-600 dark:text-gray-300">Dive in the stories create by our creators, get immersive virtual world experiences.</p>
+				</div>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+					<div class="relative group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+						<div class="aspect-video rounded-xl overflow-hidden shadow-lg relative">
+							<img 
+								src="/images/stroys1.jpg" 
+								alt="Sherlock Holmes in Cyberpunk London" 
+								class="w-full h-full object-cover"
+								loading="lazy"
+							/>
+							<div class="absolute inset-0 bg-black/40"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-xl font-bold">Sherlock Holmes in Cyberpunk London</h3>
+								<p class="text-sm opacity-90">Dive in</p>
+							</div>
+							<div class="absolute top-4 right-4">
+								<span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">DETECTIVE</span>
+							</div>
+							<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+								<a href="https://storys-global-asset.builtopia.net/story_game/hermione_story/www/index.html" class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/30 transition-colors">Play Story</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="relative group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+						<div class="aspect-video rounded-xl overflow-hidden shadow-lg relative">
+							<img 
+								src="/images/stroys2.jpg" 
+								alt="Cleopatra's Voyage Through Space" 
+								class="w-full h-full object-cover"
+								loading="lazy"
+							/>
+							<div class="absolute inset-0 bg-black/40"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-xl font-bold">Cleopatra's Voyage Through Space</h3>
+								<p class="text-sm opacity-90">Dive in</p>
+							</div>
+							<div class="absolute top-4 right-4">
+								<span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">SCI-FI</span>
+							</div>
+							<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+								<a href="https://storys-global-asset.builtopia.net/story_game/hermione_story/www/index.html" class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/30 transition-colors">Play Story</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</Container>
+		</section>
+
 		<Features/>
-		<Stats/>
 		<Testimonials/>
 		<CallToAction/>
-		<Blog/>
 	</main>
 </Layout>

@@ -1,22 +1,21 @@
 ---
-import Container from "./Container.astro"
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
 ---
 
-<div class="py-16" id="waitlist">
-    <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-    </div>
-    <Container>
-        <div class="relative">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl xl:text-5xl">Join Storys waitlist to get more powerful features!</h2>
-                <p class="mt-6 text-gray-700 dark:text-gray-300">Be among the first to experience the future of AI-powered storytelling. Get early access to exclusive features and special pricing.</p>
-                
-                <!-- Waitlist Form -->
-                <div class="mt-12 max-w-md mx-auto">
+<Layout title="Contact Us - Storys.ai">
+    <main class="py-20">
+        <Container>
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact Us</h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300">Get in touch with our team</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="max-w-2xl mx-auto">
                     <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Join waitlist for Storys.ai</h3>
+                        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">Send us a message</h2>
                         
                         <!-- Success Message (Hidden by default) -->
                         <div id="success-message" class="hidden text-center py-8">
@@ -25,79 +24,101 @@ import Container from "./Container.astro"
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Welcome to the waitlist!</h4>
-                            <p class="text-gray-600 dark:text-gray-300">You're now on the list. We'll notify you when Storys.ai launches!</p>
+                            <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message sent successfully!</h4>
+                            <p class="text-gray-600 dark:text-gray-300">We'll get back to you within 24 hours.</p>
                         </div>
 
-                        <!-- Form (Visible by default) -->
-                        <form id="waitlist-form" class="space-y-4">
-                            <div class="grid grid-cols-2 gap-4">
+                        <!-- Contact Form -->
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">First Name</label>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name</label>
                                     <input 
                                         type="text" 
                                         id="firstName"
-                                        placeholder="Jane" 
+                                        placeholder="John"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors" 
                                         required
-                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-sm transition-colors"
                                     >
                                 </div>
                                 <div>
-                                    <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">Last Name</label>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
                                     <input 
                                         type="text" 
                                         id="lastName"
-                                        placeholder="Smith" 
+                                        placeholder="Doe"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors" 
                                         required
-                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-sm transition-colors"
                                     >
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">Email</label>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
                                 <input 
                                     type="email" 
                                     id="email"
-                                    placeholder="jane@example.com" 
+                                    placeholder="john@example.com"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors" 
                                     required
-                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-sm transition-colors"
                                 >
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                                <select 
+                                    id="subject"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                                    required
+                                >
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                <textarea 
+                                    id="message"
+                                    rows="5" 
+                                    placeholder="Tell us how we can help you..."
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors resize-none" 
+                                    required
+                                ></textarea>
                             </div>
                             <button 
                                 type="submit" 
                                 id="submit-btn"
                                 class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <span id="btn-text">Join Waitlist</span>
+                                <span id="btn-text">Send Message</span>
                                 <span id="btn-loading" class="hidden">
                                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12z"></path>
                                     </svg>
-                                    Joining...
+                                    Sending...
                                 </span>
                             </button>
-                            <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
-                                ✓ Signup on behalf Check your Status<br/>
-                                🛡️ Widget by <span class="text-purple-600">@email.com</span>
-                            </p>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </Container>
-</div>
+        </Container>
+    </main>
+</Layout>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('waitlist-form');
+        const form = document.getElementById('contact-form');
         const successMessage = document.getElementById('success-message');
         const submitBtn = document.getElementById('submit-btn');
         const btnText = document.getElementById('btn-text');
         const btnLoading = document.getElementById('btn-loading');
         
-        // Form validation and submission
+        // Form submission handler
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -105,9 +126,11 @@ import Container from "./Container.astro"
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
             
             // Basic validation
-            if (!firstName || !lastName || !email) {
+            if (!firstName || !lastName || !email || !subject || !message) {
                 alert('Please fill in all fields');
                 return;
             }
@@ -137,17 +160,19 @@ import Container from "./Container.astro"
                 btnLoading.classList.add('hidden');
                 
                 // Log the mock submission (for development)
-                console.log('Mock waitlist submission:', {
+                console.log('Mock contact form submission:', {
                     firstName,
                     lastName,
                     email,
+                    subject,
+                    message,
                     timestamp: new Date().toISOString()
                 });
                 
                 // Optional: Show success notification
                 if ('Notification' in window && Notification.permission === 'granted') {
-                    new Notification('Welcome to Storys.ai!', {
-                        body: 'You\'ve been added to our waitlist.',
+                    new Notification('Message sent!', {
+                        body: 'We\'ll get back to you within 24 hours.',
                         icon: '/favicon.svg'
                     });
                 }
@@ -155,7 +180,7 @@ import Container from "./Container.astro"
         });
         
         // Real-time validation feedback
-        const inputs = form.querySelectorAll('input[required]');
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
         inputs.forEach(input => {
             input.addEventListener('blur', function() {
                 if (this.value.trim() === '') {
