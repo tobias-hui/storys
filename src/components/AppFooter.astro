@@ -10,11 +10,12 @@ import Container from "./Container.astro";
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Company Info -->
                 <div class="lg:col-span-1">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">S</span>
-                        </div>
-                        <span class="text-xl font-bold text-gray-900 dark:text-white">Storys.ai</span>
+                    <div class="flex items-center mb-4">
+                        <img 
+                            src="/storys-logo.png" 
+                            alt="Storys.ai Logo" 
+                            class="h-8 w-auto"
+                        />
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-xs">
                         Revolutionizing storytelling with AI-powered creativity. Create stunning visual novels and interactive experiences.
@@ -26,7 +27,7 @@ import Container from "./Container.astro";
                 <div>
                     <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">Product</h3>
                     <ul class="space-y-3">
-                        <li><a href="/demo" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Try Demo</a></li>
+                        <li><a href="#waitlist" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Try Demo</a></li>
                         <li><a href="/pricing" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a></li>
                         <li><a href="/#features" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Features</a></li>
                     </ul>
